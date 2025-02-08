@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A39AD2982D57E1CF000457F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A39AD27D2D57E1CC000457F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A39AD2842D57E1CC000457F2;
+			remoteInfo = CarlosV;
+		};
+		A39AD2A22D57E1CF000457F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A39AD27D2D57E1CC000457F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A39AD2842D57E1CC000457F2;
+			remoteInfo = CarlosV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A39AD2852D57E1CC000457F2 /* CarlosV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarlosV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A39AD2972D57E1CF000457F2 /* CarlosVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarlosVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A39AD2A12D57E1CF000457F2 /* CarlosVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarlosVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A39AD2872D57E1CC000457F2 /* CarlosV */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CarlosV;
+			sourceTree = "<group>";
+		};
+		A39AD29A2D57E1CF000457F2 /* CarlosVTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CarlosVTests;
+			sourceTree = "<group>";
+		};
+		A39AD2A42D57E1CF000457F2 /* CarlosVUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CarlosVUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A39AD2822D57E1CC000457F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39AD2942D57E1CF000457F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39AD29E2D57E1CF000457F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A39AD27C2D57E1CC000457F2 = {
+			isa = PBXGroup;
+			children = (
+				A39AD2872D57E1CC000457F2 /* CarlosV */,
+				A39AD29A2D57E1CF000457F2 /* CarlosVTests */,
+				A39AD2A42D57E1CF000457F2 /* CarlosVUITests */,
+				A39AD2862D57E1CC000457F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A39AD2862D57E1CC000457F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A39AD2852D57E1CC000457F2 /* CarlosV.app */,
+				A39AD2972D57E1CF000457F2 /* CarlosVTests.xctest */,
+				A39AD2A12D57E1CF000457F2 /* CarlosVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A39AD2842D57E1CC000457F2 /* CarlosV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A39AD2AB2D57E1CF000457F2 /* Build configuration list for PBXNativeTarget "CarlosV" */;
+			buildPhases = (
+				A39AD2812D57E1CC000457F2 /* Sources */,
+				A39AD2822D57E1CC000457F2 /* Frameworks */,
+				A39AD2832D57E1CC000457F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A39AD2872D57E1CC000457F2 /* CarlosV */,
+			);
+			name = CarlosV;
+			packageProductDependencies = (
+			);
+			productName = CarlosV;
+			productReference = A39AD2852D57E1CC000457F2 /* CarlosV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A39AD2962D57E1CF000457F2 /* CarlosVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A39AD2AE2D57E1CF000457F2 /* Build configuration list for PBXNativeTarget "CarlosVTests" */;
+			buildPhases = (
+				A39AD2932D57E1CF000457F2 /* Sources */,
+				A39AD2942D57E1CF000457F2 /* Frameworks */,
+				A39AD2952D57E1CF000457F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A39AD2992D57E1CF000457F2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A39AD29A2D57E1CF000457F2 /* CarlosVTests */,
+			);
+			name = CarlosVTests;
+			packageProductDependencies = (
+			);
+			productName = CarlosVTests;
+			productReference = A39AD2972D57E1CF000457F2 /* CarlosVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A39AD2A02D57E1CF000457F2 /* CarlosVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A39AD2B12D57E1CF000457F2 /* Build configuration list for PBXNativeTarget "CarlosVUITests" */;
+			buildPhases = (
+				A39AD29D2D57E1CF000457F2 /* Sources */,
+				A39AD29E2D57E1CF000457F2 /* Frameworks */,
+				A39AD29F2D57E1CF000457F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A39AD2A32D57E1CF000457F2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A39AD2A42D57E1CF000457F2 /* CarlosVUITests */,
+			);
+			name = CarlosVUITests;
+			packageProductDependencies = (
+			);
+			productName = CarlosVUITests;
+			productReference = A39AD2A12D57E1CF000457F2 /* CarlosVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A39AD27D2D57E1CC000457F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					A39AD2842D57E1CC000457F2 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					A39AD2962D57E1CF000457F2 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = A39AD2842D57E1CC000457F2;
+					};
+					A39AD2A02D57E1CF000457F2 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = A39AD2842D57E1CC000457F2;
+					};
+				};
+			};
+			buildConfigurationList = A39AD2802D57E1CC000457F2 /* Build configuration list for PBXProject "CarlosV" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A39AD27C2D57E1CC000457F2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A39AD2862D57E1CC000457F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A39AD2842D57E1CC000457F2 /* CarlosV */,
+				A39AD2962D57E1CF000457F2 /* CarlosVTests */,
+				A39AD2A02D57E1CF000457F2 /* CarlosVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A39AD2832D57E1CC000457F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39AD2952D57E1CF000457F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39AD29F2D57E1CF000457F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A39AD2812D57E1CC000457F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39AD2932D57E1CF000457F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39AD29D2D57E1CF000457F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A39AD2992D57E1CF000457F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A39AD2842D57E1CC000457F2 /* CarlosV */;
+			targetProxy = A39AD2982D57E1CF000457F2 /* PBXContainerItemProxy */;
+		};
+		A39AD2A32D57E1CF000457F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A39AD2842D57E1CC000457F2 /* CarlosV */;
+			targetProxy = A39AD2A22D57E1CF000457F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A39AD2A92D57E1CF000457F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A39AD2AA2D57E1CF000457F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A39AD2AC2D57E1CF000457F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CarlosV/Preview Content\"";
+				DEVELOPMENT_TEAM = BLXBXNCAN4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlosApps.CarlosV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A39AD2AD2D57E1CF000457F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CarlosV/Preview Content\"";
+				DEVELOPMENT_TEAM = BLXBXNCAN4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlosApps.CarlosV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A39AD2AF2D57E1CF000457F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLXBXNCAN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlosApps.CarlosVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarlosV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarlosV";
+			};
+			name = Debug;
+		};
+		A39AD2B02D57E1CF000457F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLXBXNCAN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlosApps.CarlosVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarlosV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarlosV";
+			};
+			name = Release;
+		};
+		A39AD2B22D57E1CF000457F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLXBXNCAN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlosApps.CarlosVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarlosV;
+			};
+			name = Debug;
+		};
+		A39AD2B32D57E1CF000457F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLXBXNCAN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CarlosApps.CarlosVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarlosV;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A39AD2802D57E1CC000457F2 /* Build configuration list for PBXProject "CarlosV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39AD2A92D57E1CF000457F2 /* Debug */,
+				A39AD2AA2D57E1CF000457F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A39AD2AB2D57E1CF000457F2 /* Build configuration list for PBXNativeTarget "CarlosV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39AD2AC2D57E1CF000457F2 /* Debug */,
+				A39AD2AD2D57E1CF000457F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A39AD2AE2D57E1CF000457F2 /* Build configuration list for PBXNativeTarget "CarlosVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39AD2AF2D57E1CF000457F2 /* Debug */,
+				A39AD2B02D57E1CF000457F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A39AD2B12D57E1CF000457F2 /* Build configuration list for PBXNativeTarget "CarlosVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39AD2B22D57E1CF000457F2 /* Debug */,
+				A39AD2B32D57E1CF000457F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A39AD27D2D57E1CC000457F2 /* Project object */;
+}
