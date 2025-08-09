@@ -25,7 +25,8 @@ struct CarlosVApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//          CordeDataTest()
+            TabBarView()
         }
         .modelContainer(sharedModelContainer)
     }

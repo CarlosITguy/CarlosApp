@@ -1,61 +1,71 @@
 //
-//  ContentView.swift
+//  ContentView2.swift
 //  CarlosV
 //
-//  Created by Carlos Valderrama on 2/8/25.
+//  Created by Carlos Valderrama on 2/10/25.
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    let coolName: String
+    @State var backgroundColor: Color = .clear
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
+        VStack {
+            Image(systemName: "square")
+                .resizable()
+                .frame(width: 250, height: 250)
+                .padding(16)
+            
+            Text(coolName)
+            
+                ScrollView(.horizontal){
+                    HStack {
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+                        Button {
+                            backgroundColor = .clear
+                        } label: {
+                            Text("Main Ablitites")
+                                .foregroundStyle(.red)
+                        }
+                        
+                        Button {
+                            backgroundColor = .yellow
+                        } label: {
+                            Text("Main Ablitites")
+                                .foregroundStyle(.orange)
+                        }
+                    
+                        Button {
+                            backgroundColor = .gray
+                        } label: {
+                            Text("Hobbies")
+                                .foregroundStyle(.blue)
+                        }
+                        
+                        Button {
+                            backgroundColor = .cyan
+                        } label: {
+                            Text("contact Info ")
+                                .foregroundStyle(.green)
+                        }
+                }
+                }.padding()
+            
+            Spacer()
+            
+            Text("The Carlos APP")
+                .padding()
+            
+            Text("The carlos description view")
+            
+            Spacer()
         }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        .background(backgroundColor)
     }
 }
 
+
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+  ContentView(coolName: "Some cool name")
 }
