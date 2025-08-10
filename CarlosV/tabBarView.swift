@@ -15,8 +15,8 @@ struct TabBarView: View {
                 ContentView(coolName: "First tab")
             }
             
-            Tab("Apps In progress", systemImage: "star") {
-                PokedexAppView(viewModel: PokedexViewModel())
+            Tab("Pokédex", systemImage: "gamecontroller.fill") {
+                EnhancedPokedexAppView(viewModel: EnhancedPokedexViewModel())
             }
           
 //          Tab("Testing", systemImage: "questionmark.circle") {
