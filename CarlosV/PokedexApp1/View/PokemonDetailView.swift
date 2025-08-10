@@ -12,6 +12,14 @@ struct PokemonDetailView: View {
     let heroNamespace: Namespace.ID
     @Environment(\.dismiss) private var dismiss
     @State private var showContent = false
+    @State private var selectedSpriteURL: String
+    @Namespace private var spriteHeroAnimation
+    
+    init(pokemon: PokemonDetails, heroNamespace: Namespace.ID) {
+        self.pokemon = pokemon
+        self.heroNamespace = heroNamespace
+        self._selectedSpriteURL = State(initialValue: pokemon.sprites.front_default ?? "")
+    }
     
     private var pokemonType: PokemonType {
         PokemonColorUtility.getPrimaryType(for: pokemon.name)
@@ -51,13 +59,13 @@ struct PokemonDetailView: View {
     private var heroHeader: some View {
         VStack(spacing: 20) {
             // Pokemon Image with hero effect
-            AsyncImage(url: URL(string: pokemon.sprites.front_default ?? "")) { image in
+            AsyncImage(url: URL(string: selectedSpriteURL)) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .matchedGeometryEffect(
-                        id: "pokemon-\(pokemon.name)",
-                        in: heroNamespace
+                        id: selectedSpriteURL.isEmpty ? "pokemon-\(pokemon.name)" : "sprite-\(selectedSpriteURL)",
+                        in: selectedSpriteURL.isEmpty ? heroNamespace : spriteHeroAnimation
                     )
             } placeholder: {
                 ProgressView()
@@ -73,6 +81,29 @@ struct PokemonDetailView: View {
                     )
                     .shadow(color: pokemonType.color.opacity(0.3), radius: 20, x: 0, y: 10)
             )
+            
+            // Interactive Sprite Gallery
+            if !availableSprites.isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(availableSprites, id: \.name) { sprite in
+                            InteractiveSpriteButton(
+                                sprite: sprite,
+                                isSelected: selectedSpriteURL == sprite.url,
+                                pokemonType: pokemonType,
+                                heroNamespace: spriteHeroAnimation
+                            ) {
+                                HapticFeedback.impact(.light)
+                                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                                    selectedSpriteURL = sprite.url
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
             
             // Pokemon basic info
             VStack(spacing: 8) {
@@ -151,20 +182,11 @@ struct PokemonDetailView: View {
                     .foregroundStyle(.secondary)
                     .padding(.vertical, 20)
             } else {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 8) {
-                    ForEach(Array(pokemon.moves.prefix(10).enumerated()), id: \.offset) { index, moveWrapper in
-                        MovePill(moveName: moveWrapper.move.name, pokemonType: pokemonType)
-                    }
-                    
-                    if pokemon.moves.count > 10 {
-                        Text("+ \(pokemon.moves.count - 10) more")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 6)
-                            .background(.ultraThinMaterial, in: Capsule())
-                    }
-                }
+                HorizontalMovesView(
+                    moves: pokemon.moves.map { $0.move.name },
+                    pokemonType: pokemonType,
+                    showContent: showContent
+                )
             }
         }
         .transition(.move(edge: .bottom).combined(with: .opacity))
@@ -172,22 +194,7 @@ struct PokemonDetailView: View {
     }
     
     private var additionalInfoSection: some View {
-        ModernCardView(title: "Sprites Gallery", icon: "photo.stack.fill") {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 16) {
-                    ForEach(availableSprites, id: \.name) { sprite in
-                        SpritePreview(
-                            url: sprite.url,
-                            name: sprite.name
-                        )
-                    }
-                }
-                .padding(.horizontal, 4)
-            }
-            .frame(height: 120)
-        }
-        .transition(.move(edge: .bottom).combined(with: .opacity))
-        .animation(.easeOut(duration: 0.5).delay(0.2), value: showContent)
+        EmptyView()
     }
     
     private var availableSprites: [(name: String, url: String)] {
@@ -272,77 +279,32 @@ struct StatRow: View {
     }
 }
 
-struct MovePill: View {
-    let moveName: String
-    let pokemonType: PokemonType
-    
-    init(moveName: String, pokemonType: PokemonType = .normal) {
-        self.moveName = moveName
-        self.pokemonType = pokemonType
-    }
-    
-    var body: some View {
-        Text(moveName.replacingOccurrences(of: "-", with: " ").capitalized)
-            .font(.caption)
-            .fontWeight(.medium)
-            .lineLimit(1)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 6)
-            .background(
-                LinearGradient(
-                    colors: pokemonType.gradientColors,
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                ),
-                in: Capsule()
-            )
-            .foregroundStyle(.white)
-    }
-}
-
-struct SpritePreview: View {
-    let url: String
-    let name: String
-    
-    var body: some View {
-        VStack(spacing: 8) {
-            AsyncImage(url: URL(string: url)) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } placeholder: {
-                ProgressView()
-                    .frame(width: 60, height: 60)
-            }
-            .frame(width: 80, height: 80)
-            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
-            
-            Text(name)
-                .font(.caption2)
-                .fontWeight(.medium)
-                .foregroundStyle(.secondary)
-                .lineLimit(1)
-        }
-    }
-}
 
 #Preview {
-    PokemonDetailView(
+    @Namespace var heroNamespace
+    
+    return PokemonDetailView(
         pokemon: PokemonDetails(
             name: "pikachu",
             order: 25,
-            moves: [],
+            moves: [
+                MoveWrapper(move: Move(name: "thunderbolt", url: "")),
+                MoveWrapper(move: Move(name: "quick-attack", url: "")),
+                MoveWrapper(move: Move(name: "thunder-wave", url: "")),
+                MoveWrapper(move: Move(name: "agility", url: "")),
+                MoveWrapper(move: Move(name: "double-team", url: ""))
+            ],
             sprites: Sprites(
-                back_default: nil,
+                back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
                 back_female: nil,
-                back_shiny: nil,
+                back_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/25.png",
                 back_shiny_female: nil,
                 front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
                 front_female: nil,
-                front_shiny: nil,
+                front_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
                 front_shiny_female: nil
             )
         ),
-        heroNamespace: Namespace().wrappedValue
+        heroNamespace: heroNamespace
     )
 }
