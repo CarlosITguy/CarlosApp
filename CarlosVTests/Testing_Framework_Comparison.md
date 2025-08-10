@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document compares the implementation of identical test suites using both XCTest (traditional) and Swift Testing (modern @Test) frameworks for the CarlosV portfolio app's Pokédx ViewModels.
+This document compares the implementation of identical test suites using both XCTest (traditional) and Swift Testing (modern @Test) frameworks for the CarlosV portfolio app's Pokédex ViewModels.
 
 ## Test Coverage Summary
 
